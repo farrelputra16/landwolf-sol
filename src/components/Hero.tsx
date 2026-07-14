@@ -65,22 +65,13 @@ export default function Hero({ onBuyClick }: { onBuyClick?: () => void }) {
         </p>
 
         <div className="hero-buttons">
-          <button className="btn btn-green" onClick={onBuyClick}>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 11.5h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zm0-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zm0-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1z" fill="currentColor" />
-            </svg>
+          <button className="btn" onClick={onBuyClick}>
             Buy {CONFIG.tokenSymbol}
           </button>
-          <a href={CONFIG.chartUrl} className="btn btn-purple">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13zM2 3v10h12V3H2zm2 2h8v6H4V5z" fill="currentColor" />
-            </svg>
+          <a href={CONFIG.chartUrl} className="btn">
             Chart
           </a>
-          <a href={CONFIG.swapUrl} className="btn btn-outline">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M4 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4H4zm0 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm1 3v6h2V5H5zm4 0v6h2V5H9z" fill="currentColor" />
-            </svg>
+          <a href={CONFIG.swapUrl} className="btn">
             Swap
           </a>
         </div>

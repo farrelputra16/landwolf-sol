@@ -76,22 +76,16 @@ export default function PhantomBuy() {
                   Connected: {short(wallet)}
                 </div>
                 <div className="phantom-btn-wrap">
-                  <button className="btn btn-green btn-small" onClick={onBuy}>
-                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                      <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 11.5h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zm0-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zm0-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1z" fill="currentColor" />
-                    </svg>
+                  <button className="btn btn-small" onClick={onBuy}>
                     Buy {CONFIG.tokenSymbol}
                   </button>
-                  <button className="btn btn-outline btn-small" onClick={disconnect}>
+                  <button className="btn btn-small" onClick={disconnect}>
                     Disconnect
                   </button>
                 </div>
               </>
             ) : (
-              <button className="btn btn-purple" onClick={connect}>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M8 0a8 8 0 1 0 8 8 8.009 8.009 0 0 0-8-8zM7 11.5V9.5H4a.5.5 0 0 1 0-1h3V6.5a.5.5 0 0 1 1 0v2h3a.5.5 0 0 1 0 1H8v2a.5.5 0 0 1-1 0z" fill="currentColor" />
-                </svg>
+              <button className="btn" onClick={connect}>
                 {installed ? "Connect Phantom" : "Install Phantom"}
               </button>
             )}
