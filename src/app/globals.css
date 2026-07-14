@@ -43,6 +43,11 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  cursor: url('/img/cursor.png') 16 16, auto;
+}
+
+a, button, .btn, .gallery-item, .wallet-option, .nav-toggle, .modal-close, .lightbox-close, .hero-ca, .step-card {
+  cursor: url('/img/cursor.png') 16 16, pointer;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -369,6 +374,10 @@ section { padding: 110px 0; position: relative; z-index: 1; }
 .reveal-delay-4 { transition-delay: 0.32s; }
 
 /* ──────── ABOUT ──────── */
+.about { position: relative; }
+
+.about .container { position: relative; z-index: 2; }
+
 .about-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
   margin-top: 40px;
