@@ -1,4 +1,5 @@
 import { CONFIG } from "@/lib/config";
+import SocialIcon from "./SocialIcon";
 
 const tickerItems = [
   { text: `${CONFIG.tokenName} ON ${CONFIG.chainName}`, green: false },
@@ -27,20 +28,25 @@ export default function Community() {
             href={CONFIG.socials.telegram}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary"
+            className="btn btn-purple"
           >
-            ✈ Telegram
+            <SocialIcon icon="telegram" size={14} />
+            Telegram
           </a>
           <a
             href={CONFIG.socials.twitter}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-secondary"
+            className="btn btn-outline"
           >
-            𝕏 Twitter / X
+            <SocialIcon icon="twitter" size={14} />
+            Twitter / X
           </a>
-          <a href="#" className="btn btn-secondary">
-            🔥 Buy Now
+          <a href="#" className="btn btn-green">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+              <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 11.5h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zm0-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zm0-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1z" fill="currentColor" />
+            </svg>
+            Buy Now
           </a>
         </div>
       </div>

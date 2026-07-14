@@ -1,5 +1,6 @@
 import { CONFIG, formatCA } from "@/lib/config";
 import SvgLogo from "./SvgLogo";
+import SocialIcon from "./SocialIcon";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="nav-logo">
-              <SvgLogo size={44} />
+              <SvgLogo size={40} />
               <span className="nav-logo-text">LANDWOLF</span>
             </div>
             <p>
@@ -48,10 +49,18 @@ export default function Footer() {
             reserved. 🐺
           </p>
           <div className="footer-socials">
-            <a href={CONFIG.socials.telegram}>✈</a>
-            <a href={CONFIG.socials.twitter}>𝕏</a>
-            <a href={CONFIG.socials.coingecko}>🦎</a>
-            <a href={CONFIG.socials.coinmarketcap}>📊</a>
+            <a href={CONFIG.socials.telegram} aria-label="Telegram">
+              <SocialIcon icon="telegram" size={14} />
+            </a>
+            <a href={CONFIG.socials.twitter} aria-label="Twitter">
+              <SocialIcon icon="twitter" size={14} />
+            </a>
+            <a href={CONFIG.socials.coingecko} aria-label="CoinGecko">
+              <SocialIcon icon="gecko" size={14} />
+            </a>
+            <a href={CONFIG.socials.coinmarketcap} aria-label="CoinMarketCap">
+              <SocialIcon icon="cmc" size={14} />
+            </a>
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ export default function Tokenomics() {
         </h2>
         <p
           className="section-desc"
-          style={{ textAlign: "center", margin: "0 auto 16px" }}
+          style={{ textAlign: "center", margin: "0 auto 14px" }}
         >
           No BS. No taxes. Just the wolf.
         </p>

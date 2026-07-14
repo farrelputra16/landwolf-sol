@@ -30,7 +30,7 @@ export default function Nav({ onBuyClick }: { onBuyClick?: () => void }) {
         ))}
       </div>
       <div className="nav-right">
-        <button className="nav-cta" onClick={onBuyClick}>
+        <button className="btn-nav" onClick={onBuyClick}>
           Buy $WOLF
         </button>
         <button className="nav-toggle" onClick={() => setOpen(!open)} aria-label="Toggle menu">
