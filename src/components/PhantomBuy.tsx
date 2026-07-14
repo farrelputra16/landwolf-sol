@@ -58,6 +58,15 @@ export default function PhantomBuy() {
 
   return (
     <section className="phantom-section" id="buy">
+      <div className="section-bg">
+        <img src="/img/bg6.png" alt="" aria-hidden="true" loading="lazy" className="bg-animate-2" />
+        <div
+          className="section-bg-overlay"
+          style={{
+            background: "linear-gradient(135deg, rgba(34,211,238,0.08) 0%, rgba(74,222,128,0.06) 40%, rgba(167,139,250,0.04) 70%, transparent 100%)",
+          }}
+        />
+      </div>
       <div className="container">
         <div className="phantom-grid">
           <div className="phantom-left">

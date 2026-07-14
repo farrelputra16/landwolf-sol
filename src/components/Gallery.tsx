@@ -20,15 +20,6 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className="gallery">
-      <div className="section-bg">
-        <img src="/img/bg6.png" alt="" aria-hidden="true" loading="lazy" className="bg-animate" />
-        <div
-          className="section-bg-overlay"
-          style={{
-            background: "linear-gradient(135deg, rgba(244,114,182,0.08) 0%, rgba(167,139,250,0.06) 40%, rgba(74,222,128,0.04) 70%, transparent 100%)",
-          }}
-        />
-      </div>
       <div className="container">
         <div className="gallery-header">
           <div className="section-label">✦ Gallery</div>
