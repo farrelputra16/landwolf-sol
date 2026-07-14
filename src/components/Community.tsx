@@ -14,6 +14,15 @@ const tickerItems = [
 export default function Community() {
   return (
     <section id="community" className="community">
+      <div className="section-bg">
+        <img src="/img/bg4.png" alt="" aria-hidden="true" loading="lazy" className="bg-animate-3" />
+        <div
+          className="section-bg-overlay"
+          style={{
+            background: "linear-gradient(135deg, rgba(167,139,250,0.08) 0%, rgba(244,114,182,0.06) 40%, rgba(245,158,11,0.04) 70%, transparent 100%)",
+          }}
+        />
+      </div>
       <div className="container">
         <div className="section-label">✦ Community</div>
         <h2>
