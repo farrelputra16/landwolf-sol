@@ -82,6 +82,7 @@ nav {
 
 .nav-logo { display: flex; align-items: center; gap: 10px; }
 .nav-logo svg { width: 32px; height: 32px; filter: drop-shadow(0 0 8px rgba(74,222,128,0.25)); }
+.nav-icon { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
 
 .nav-logo-text {
   font-family: var(--font-balloon);
@@ -267,6 +268,7 @@ nav {
 
 .hero-logo-svg { margin-bottom: 8px; display: flex; justify-content: center; }
 .hero-logo-svg svg { width: 72px; height: 72px; filter: drop-shadow(0 0 20px rgba(74,222,128,0.2)); }
+.hero-icon { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; filter: drop-shadow(0 0 20px rgba(74,222,128,0.2)); }
 
 .hero h1 {
   font-family: var(--font-balloon);
@@ -930,5 +932,6 @@ footer {
   .footer-grid { grid-template-columns: 1fr; gap: 20px; }
   .hero h1 { font-size: clamp(3.5rem, 16vw, 5.5rem); }
   .hero-logo-svg svg { width: 56px; height: 56px; }
+  .hero-icon { width: 64px; height: 64px; }
   section { padding: 70px 0; }
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import SvgLogo from "./SvgLogo";
 
 const links = [
   { href: "#about", label: "About" },
@@ -19,7 +18,7 @@ export default function Nav({ onBuyClick }: { onBuyClick?: () => void }) {
   return (
     <nav>
       <a href="#" className="nav-logo">
-        <SvgLogo />
+        <img src="/img/icon.png" alt="Landwolf" className="nav-icon" />
         <span className="nav-logo-text">LANDWOLF</span>
       </a>
       <div className={`nav-links${open ? " open" : ""}`}>

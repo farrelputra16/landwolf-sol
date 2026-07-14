@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import { CONFIG, formatCA } from "@/lib/config";
-import SvgLogo from "./SvgLogo";
 import SocialIcon from "./SocialIcon";
 import ThreeBackground from "./ThreeBackground";
 
@@ -60,7 +59,7 @@ export default function Hero({ onBuyClick }: { onBuyClick?: () => void }) {
         </div>
 
         <div className="hero-logo-svg">
-          <SvgLogo size={72} />
+          <img src="/img/icon.png" alt="Landwolf" className="hero-icon" />
         </div>
 
         <h1>{CONFIG.tokenName}</h1>
