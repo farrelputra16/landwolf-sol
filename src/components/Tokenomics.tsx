@@ -9,7 +9,16 @@ const stats = [
 
 export default function Tokenomics() {
   return (
-    <section id="tokenomics">
+    <section id="tokenomics" className="tokenomics">
+      <div className="section-bg">
+        <img src="/img/bg3.png" alt="" aria-hidden="true" loading="lazy" />
+        <div
+          className="section-bg-overlay"
+          style={{
+            background: "linear-gradient(135deg, rgba(167,139,250,0.1) 0%, rgba(244,114,182,0.06) 40%, rgba(34,211,238,0.06) 70%, transparent 100%)",
+          }}
+        />
+      </div>
       <div className="container">
         <div className="section-label" style={{ textAlign: "center" }}>
           ✦ Tokenomics

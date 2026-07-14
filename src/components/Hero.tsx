@@ -4,15 +4,20 @@ import { useEffect, useRef } from "react";
 import { CONFIG, formatCA } from "@/lib/config";
 import SvgLogo from "./SvgLogo";
 import SocialIcon from "./SocialIcon";
+import ThreeBackground from "./ThreeBackground";
+
+const particleColors = ["#4ade80", "#f472b6", "#22d3ee", "#a78bfa", "#f59e0b"];
 
 function createParticles(container: HTMLElement) {
-  for (let i = 0; i < 40; i++) {
+  for (let i = 0; i < 60; i++) {
     const p = document.createElement("div");
     p.className = "particle";
     p.style.left = Math.random() * 100 + "%";
-    p.style.animationDuration = 5 + Math.random() * 8 + "s";
-    p.style.animationDelay = Math.random() * 10 + "s";
-    p.style.width = p.style.height = 2 + Math.random() * 4 + "px";
+    p.style.animationDuration = 6 + Math.random() * 10 + "s";
+    p.style.animationDelay = Math.random() * 12 + "s";
+    p.style.width = p.style.height = 2 + Math.random() * 5 + "px";
+    p.style.background = particleColors[Math.floor(Math.random() * particleColors.length)];
+    p.style.boxShadow = `0 0 6px ${p.style.background}`;
     container.appendChild(p);
   }
 }
@@ -46,6 +51,7 @@ export default function Hero({ onBuyClick }: { onBuyClick?: () => void }) {
         <source src="/img/bg1.mp4" type="video/mp4" />
       </video>
       <div className="hero-overlay" />
+      <ThreeBackground />
       <div className="hero-particles" ref={particlesRef} />
 
       <div className="hero-content">
@@ -68,10 +74,10 @@ export default function Hero({ onBuyClick }: { onBuyClick?: () => void }) {
           <button className="btn" onClick={onBuyClick}>
             Buy {CONFIG.tokenSymbol}
           </button>
-          <a href={CONFIG.chartUrl} className="btn">
+          <a href={CONFIG.chartUrl} className="btn btn-cyan">
             Chart
           </a>
-          <a href={CONFIG.swapUrl} className="btn">
+          <a href={CONFIG.swapUrl} className="btn btn-pink">
             Swap
           </a>
         </div>

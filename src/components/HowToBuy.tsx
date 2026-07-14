@@ -24,8 +24,14 @@ const steps = [
 export default function HowToBuy() {
   return (
     <section id="how" className="how">
-      <div className="how-bg">
+      <div className="section-bg">
         <img src="/img/bg2.png" alt="" aria-hidden="true" loading="lazy" />
+        <div
+          className="section-bg-overlay"
+          style={{
+            background: "linear-gradient(135deg, rgba(74,222,128,0.12) 0%, rgba(34,211,238,0.08) 40%, rgba(244,114,182,0.06) 70%, transparent 100%)",
+          }}
+        />
       </div>
       <div className="container">
         <div className="how-header">
