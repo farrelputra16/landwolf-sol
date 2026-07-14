@@ -24,6 +24,9 @@ const steps = [
 export default function HowToBuy() {
   return (
     <section id="how" className="how">
+      <div className="how-bg">
+        <img src="/img/bg2.png" alt="" aria-hidden="true" loading="lazy" />
+      </div>
       <div className="container">
         <div className="how-header">
           <div className="section-label">✦ How to Buy</div>
