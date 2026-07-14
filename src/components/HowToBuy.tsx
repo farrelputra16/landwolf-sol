@@ -25,7 +25,7 @@ export default function HowToBuy() {
   return (
     <section id="how" className="how">
       <div className="section-bg">
-        <img src="/img/bg2.png" alt="" aria-hidden="true" loading="lazy" />
+        <img src="/img/bg2.png" alt="" aria-hidden="true" loading="lazy" className="bg-animate" />
         <div
           className="section-bg-overlay"
           style={{

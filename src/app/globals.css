@@ -423,6 +423,37 @@ section { padding: 110px 0; position: relative; z-index: 1; }
   pointer-events: none;
 }
 
+/* ──────── ANIMATED BG ──────── */
+.bg-animate {
+  animation: bgKenBurns 30s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.bg-animate-2 {
+  animation: bgKenBurns2 35s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.bg-animate-3 {
+  animation: bgKenBurns3 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes bgKenBurns {
+  0% { transform: scale(1.08) translate(0%, 0%); }
+  100% { transform: scale(1.15) translate(-4%, -2%); }
+}
+
+@keyframes bgKenBurns2 {
+  0% { transform: scale(1.08) translate(0%, 0%); }
+  100% { transform: scale(1.16) translate(3%, -3%); }
+}
+
+@keyframes bgKenBurns3 {
+  0% { transform: scale(1.08) translate(0%, 0%); }
+  100% { transform: scale(1.14) translate(-2%, 3%); }
+}
+
 /* ──────── HOW TO BUY ──────── */
 .how {
   background: var(--bg-card);

@@ -11,7 +11,7 @@ export default function Tokenomics() {
   return (
     <section id="tokenomics" className="tokenomics">
       <div className="section-bg">
-        <img src="/img/bg3.png" alt="" aria-hidden="true" loading="lazy" />
+        <img src="/img/bg3.png" alt="" aria-hidden="true" loading="lazy" className="bg-animate-2" />
         <div
           className="section-bg-overlay"
           style={{
