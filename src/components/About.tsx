@@ -23,7 +23,11 @@ export default function About() {
             </div>
           </div>
           <div className="about-image">
-            <img src="/img/2.jpg" alt="Landwolf Character" loading="lazy" />
+            <img
+              src="/img/photo_6244586014496199191_y.jpg"
+              alt="Landwolf Character"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>

@@ -1,13 +1,19 @@
+import { CONFIG, formatCA } from "@/lib/config";
+import SvgLogo from "./SvgLogo";
+
 export default function Footer() {
   return (
     <footer>
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <div className="nav-logo">✦ LANDWOLF</div>
+            <div className="nav-logo">
+              <SvgLogo size={44} />
+              <span className="nav-logo-text">LANDWOLF</span>
+            </div>
             <p>
               Half man, half wolf. All party. The original Boy&apos;s Club alpha
-              on Robinhood Chain.
+              on {CONFIG.chainName}.
             </p>
           </div>
 
@@ -21,28 +27,31 @@ export default function Footer() {
 
           <div className="footer-col">
             <h5>Tools</h5>
-            <a href="#">Swap</a>
-            <a href="#">Chart</a>
+            <a href={CONFIG.swapUrl}>Swap</a>
+            <a href={CONFIG.chartUrl}>Chart</a>
             <a href="#">Bridge</a>
             <a href="#">Earn</a>
           </div>
 
           <div className="footer-col">
             <h5>Community</h5>
-            <a href="#">Telegram</a>
-            <a href="#">Twitter / X</a>
-            <a href="#">CoinGecko</a>
-            <a href="#">CoinMarketCap</a>
+            <a href={CONFIG.socials.telegram}>Telegram</a>
+            <a href={CONFIG.socials.twitter}>Twitter / X</a>
+            <a href={CONFIG.socials.coingecko}>CoinGecko</a>
+            <a href={CONFIG.socials.coinmarketcap}>CoinMarketCap</a>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>© 2026 Landwolf Robinhood. All rights reserved. 🐺</p>
+          <p>
+            CA: {formatCA(CONFIG.contractAddress)} — © 2026 Landwolf. All rights
+            reserved. 🐺
+          </p>
           <div className="footer-socials">
-            <a href="#">✈</a>
-            <a href="#">𝕏</a>
-            <a href="#">📈</a>
-            <a href="#">🦎</a>
+            <a href={CONFIG.socials.telegram}>✈</a>
+            <a href={CONFIG.socials.twitter}>𝕏</a>
+            <a href={CONFIG.socials.coingecko}>🦎</a>
+            <a href={CONFIG.socials.coinmarketcap}>📊</a>
           </div>
         </div>
       </div>

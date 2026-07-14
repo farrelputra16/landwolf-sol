@@ -1,6 +1,8 @@
+import { CONFIG } from "@/lib/config";
+
 const tickerItems = [
-  { text: "LANDWOLF ON ROBINHOOD CHAIN", green: false },
-  { text: "$WOLF", green: true },
+  { text: `${CONFIG.tokenName} ON ${CONFIG.chainName}`, green: false },
+  { text: CONFIG.tokenSymbol, green: true },
   { text: "ZERO TAX", green: false },
   { text: "LP LOCKED", green: true },
   { text: "JOIN THE PACK", green: false },
@@ -21,10 +23,20 @@ export default function Community() {
           about!
         </p>
         <div className="community-buttons">
-          <a href="#" className="btn btn-primary">
+          <a
+            href={CONFIG.socials.telegram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+          >
             ✈ Telegram
           </a>
-          <a href="#" className="btn btn-secondary">
+          <a
+            href={CONFIG.socials.twitter}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary"
+          >
             𝕏 Twitter / X
           </a>
           <a href="#" className="btn btn-secondary">

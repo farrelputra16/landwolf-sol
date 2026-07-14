@@ -3,13 +3,15 @@
 import { useState, useCallback } from "react";
 
 const images = [
+  { src: "/img/photo_6244586014496199191_y.jpg", className: "" },
+  { src: "/img/photo_6244586014496199194_y.jpg", className: "tall" },
+  { src: "/img/photo_6244586014496199196_y.jpg", className: "" },
+  { src: "/img/photo_6244586014496199203_y.jpg", className: "" },
+  { src: "/img/photo_5093933579766533326_y.jpg", className: "" },
   { src: "/img/2.jpg", className: "" },
-  { src: "/img/3.jpg", className: "tall" },
-  { src: "/img/2.jpg", className: "" },
-  { src: "/img/3.jpg", className: "" },
-  { src: "/img/2.jpg", className: "" },
-  { src: "/img/3.jpg", className: "" },
-  { src: "/img/2.jpg", className: "wide" },
+  { src: "/img/3.jpg", className: "wide" },
+  { src: "/img/photo_6244586014496199196_y.jpg", className: "" },
+  { src: "/img/photo_6244586014496199191_y.jpg", className: "" },
 ];
 
 export default function Gallery() {
@@ -43,16 +45,10 @@ export default function Gallery() {
       <div
         className={`lightbox${lightbox ? " active" : ""}`}
         onClick={(e) => { if (e.target === e.currentTarget) close(); }}
-        onKeyDown={(e) => { if (e.key === "Escape") close(); }}
         role="dialog"
         aria-modal="true"
       >
-        <span
-          className="lightbox-close"
-          onClick={close}
-          role="button"
-          tabIndex={0}
-        >
+        <span className="lightbox-close" onClick={close} role="button" tabIndex={0}>
           ✕
         </span>
         {lightbox && <img src={lightbox} alt="Expanded view" />}

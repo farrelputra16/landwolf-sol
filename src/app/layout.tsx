@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "LANDWOLF — Robinhood Chain",
     description:
       "Half man, half wolf. All party. The alpha of Boy's Club on Robinhood Chain.",
-    images: ["/img/2.jpg"],
+    images: ["/img/photo_6244586014496199191_y.jpg"],
   },
 };
 

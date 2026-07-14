@@ -1,8 +1,10 @@
+import { CONFIG, formatCA } from "@/lib/config";
+
 const stats = [
   { label: "Total Supply", value: "1,000,000,000" },
-  { label: "Taxes", value: "0% / 0%", color: "var(--wolf-green)" },
+  { label: "Taxes", value: "0% / 0%" },
   { label: "LP", value: "🔒 Locked" },
-  { label: "Chain", value: "Robinhood", color: "var(--wolf-amber)" },
+  { label: "Chain", value: CONFIG.chainName },
 ];
 
 export default function Tokenomics() {
@@ -26,19 +28,24 @@ export default function Tokenomics() {
           {stats.map((s) => (
             <div className="tstat" key={s.label}>
               <div className="tstat-label">{s.label}</div>
-              <div className="tstat-value" style={s.color ? { color: s.color } : undefined}>
-                {s.value}
-              </div>
+              <div className="tstat-value">{s.value}</div>
             </div>
           ))}
         </div>
 
         <p className="tokenomics-note">
           Contract:{" "}
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.8rem" }}>
-            0x67466be17df832165f8c80a5a120ccc652bd7e69
+          <span className="tstat-value mono">
+            {formatCA(CONFIG.contractAddress)}
           </span>{" "}
-          — <a href="#">Verify on Explorer ↗</a>
+          —{" "}
+          {CONFIG.contractAddress === "TBD" ? (
+            <span style={{ color: "var(--wolf-amber)" }}>
+              Will be announced at launch 🚀
+            </span>
+          ) : (
+            <a href={CONFIG.explorerUrl}>Verify on Explorer ↗</a>
+          )}
         </p>
       </div>
     </section>
